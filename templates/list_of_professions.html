@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if list == "ol" %}
+<h3>Список профессий</h3>
+<ol>
+    {% for prof in profs %}
+    <li>{{prof}}</li>
+    {% endfor %}
+</ol>
+{% elif list == "ul" %}
+<h3>Список профессий</h3>
+<ul>
+    {% for prof in profs %}
+    <li>{{prof}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2>Ошибка невозвожно вывести список профессий, так как введен неверный параметер. Введите ul или ol</h2>
+{% endif %}
+{% endblock %}
