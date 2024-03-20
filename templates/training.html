@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if profession == "инженерные тренажеры" %}
+<h3 align="center">Инженерные тренажеры</h3>
+<img src="{{url_for('static', filename='image/IT.png')}}" align="center">
+{% elif profession == "научные симуляторы"%}
+<h3 align="center">Научные симуляторы</h3>
+<img src="{{url_for('static', filename='image/HC.png')}}" align="center">
+{% endif %}
+{% endblock %}
