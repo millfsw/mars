@@ -13,6 +13,7 @@ def site1():
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h1>Миссия Колонизация Марса</h1>
@@ -31,6 +32,7 @@ def site2():
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h1>И на Марсе будут яблони цвести!</h1>
@@ -49,6 +51,7 @@ def site3():
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h2>Человечество вырастает из детства.<br>Человечеству мала одна планета.<br>Мы сделаем обитаемыми безжизненные пока планеты.<br>И начнем с Марса!<br>Присоединяйся!</h2>
@@ -67,6 +70,7 @@ def site4():
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Привет, Марс!</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h1>Жди нас, Марс!</h1>
@@ -87,14 +91,15 @@ def site5():
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Колонизация Марса</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="static/css/style.css">
         </head>
         <body>
-        <h1>Жди нас, Марс!</h1>
+        <h1 class="pr_img" >Жди нас, Марс!</h1>
         <img src="static/image/MARS.png">
-        <h2 class="text1">Человечество вырастает из детства.</h2>
-        <h2 class="text2">Человечеству мала одна планета.</h2>
-        <h2 class="text1">Мы сделаем обитаемыми безжизненные пока планеты.</h2>
+        <h2 class="text2">Человечество вырастает из детства.</h2>
+        <h2 class="text1">Человечеству мала одна планета.</h2>
+        <h2 class="text2">Мы сделаем обитаемыми безжизненные пока планеты.</h2>
         <h2 class="text3">И начнем с Марса!<h2>
         <h2 class="text4">Присоединяйся!</h2>
         </body>
@@ -102,10 +107,10 @@ def site5():
     """
 
 
-@app.route('/astronaut_selection', methods=['POST', 'GET'])
+@app.route("/astronaut_selection", methods=["POST", "GET"])
 def site6():
-    if request.method == 'GET':
-        return f'''<!doctype html>
+    if request.method == "GET":
+        return f"""<!doctype html>
                         <html lang="en">
                           <head>
                             <meta charset="utf-8">
@@ -114,6 +119,7 @@ def site6():
                             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
                             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
                             crossorigin="anonymous">
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
                             <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
                             <title>Пример формы</title>
                           </head>
@@ -214,13 +220,13 @@ def site6():
                                 </form>
                             </div>
                           </body>
-                        </html>'''
-    elif request.method == 'POST':
-        print(request.form['text'])
-        print(request.form['text'])
-        print(request.form['email'])
-        print(request.form['work'])
-        print(request.form['sex'])
+                        </html>"""
+    elif request.method == "POST":
+        print(request.form["text"])
+        print(request.form["text"])
+        print(request.form["email"])
+        print(request.form["work"])
+        print(request.form["sex"])
         return "Форма отправлена"
 
 
@@ -234,6 +240,7 @@ def site7(planet_name):
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Колонизация Марса</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h1>Мое предложение: {planet_name}</h1>
@@ -244,10 +251,12 @@ def site7(planet_name):
         <h2 style="background-color:lightcoral;">Наконец, она просто красива!</h2>
         </body>
         </html>
-    """.format(planet_name=planet_name)
+    """.format(
+        planet_name=planet_name
+    )
 
 
-@app.route("/choice/<nickname>/<int:level>/<float:rating>")
+@app.route("/results/<nickname>/<int:level>/<float:rating>")
 def site8(nickname, level: int, rating: float):
     return """
         <!doctype html>
@@ -257,6 +266,7 @@ def site8(nickname, level: int, rating: float):
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Колонизация Марса</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         </head>
         <body>
         <h1>Результаты отбора</h1>
@@ -266,4 +276,51 @@ def site8(nickname, level: int, rating: float):
         <h2 style="background-color:lightyellow;">Желаем удачи!<h2>
         </body>
         </html>
-    """.format(nickname=nickname, level=level, rating=rating)
+    """.format(
+        nickname=nickname, level=level, rating=rating
+    )
+
+
+@app.route("/carousel")
+def site10():
+    return """
+        <!doctype html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Колонизация Марса</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </head>
+        <body>
+        <h1 align="center">Пейзажи Марса</h1>
+        <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/image/image1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/image/image2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/image/image3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        </body>
+        </html>
+    """
