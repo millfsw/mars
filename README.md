@@ -1,4 +1,3 @@
-**Урок flask-wtf**
-1. Готовимся к миссии:  flask --app mars_wtf run --debug --port 8080
-2. Тренировки в полете: flask --app mars_wtf run --debug --port 8080
-3. Список профессий: flask --app mars_wtf run --debug --port 8080
+**Урок Введение во flask. Обработка HTML-форм**
+1. Пейзажи Марса: flask --app mars run --debug --port 8080
+   Ссылка: http://127.0.0.1:8080/carousel
