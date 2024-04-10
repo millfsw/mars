@@ -124,7 +124,7 @@ def site6():
                             <title>Пример формы</title>
                           </head>
                           <body>
-                            <h1>Анкета претендента на участие в миссии</h1>
+                            <h1 align="center">Анкета претендента на участие в миссии</h1>
                             <div>
                                 <form class="login_form" method="post">
                                     <input type="text" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Введите фамилию" name="text">
@@ -279,6 +279,42 @@ def site8(nickname, level: int, rating: float):
     """.format(
         nickname=nickname, level=level, rating=rating
     )
+
+
+@app.route("/load_photo", methods=["POST", "GET"])
+def site9():
+    if request.method == "GET":
+        return f"""<!doctype html>
+                        <html lang="en">
+                          <head>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                             <link rel="stylesheet"
+                             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+                             integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+                             crossorigin="anonymous">
+                             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+                            <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
+                            <title>Отбор астронавта</title>
+                          </head>
+                          <body>
+                            <h1 align="center">Загрузка фотографии</h1>
+                            <h3 align="center">для участия в миссии</h3>
+                            <form method="post" enctype="multipart/form-data" class="form">
+                               <div class="form-group">
+                                    <label for="photo">Выберите файл</label><br><br>
+                                    <input type="file" class="form-control-file" id="photo" name="file">
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Отправить</button>
+                            </form>
+                          </body>
+                        </html>"""
+    elif request.method == "POST":
+        f = request.files["file"]
+        
+        print(f.read())
+        return "Форма отправлена"
 
 
 @app.route("/carousel")
